@@ -5,11 +5,7 @@ using namespace std;
 
 // Cross-platform sleep function
 void crossPlatformSleep(int seconds) {
-#ifdef _WIN32
-    Sleep(seconds * 1000); // Sleep takes milliseconds on Windows
-#else
-    sleep(seconds); // sleep takes seconds on POSIX
-#endif
+  Sleep(seconds * 1000); // Sleep takes milliseconds
 }
 
 // ------------------------
